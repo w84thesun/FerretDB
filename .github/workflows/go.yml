@@ -64,6 +64,40 @@ jobs:
           git status
           git diff --exit-code
 
+  test-windows:
+    name: Test Windows CI
+    runs-on: windows-2022
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup Go
+        uses: FerretDB/github-actions/setup-go@main
+        with:
+          cache-key: test
+
+      - name: Install Task
+        run: go generate -x
+        working-directory: tools
+
+      - name: Start environment
+        run: bin/task env-up-detach
+
+      - name: Run init
+        run: bin/task init
+
+      - name: Regenerate and reformat
+        run: bin/task gen fmt docs-fmt
+
+      - name: Wait for and setup environment
+        run: bin/task env-setup
+
+      - name: Run tests
+        run: bin/task test
+
   golangci-lint:
     name: golangci-lint
     runs-on: ubuntu-20.04
