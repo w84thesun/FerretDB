@@ -68,9 +68,9 @@ jobs:
     name: Test Windows CI
     runs-on: windows-2022
     env:
-      GOPATH: "%USERPROFILE%\go"
-      GOCACHE: "%USERPROFILE%\go\cache"
-      GOMODCACHE: "%USERPROFILE%\go\mod"
+      GOPATH: ""
+      GOCACHE: ""
+      GOMODCACHE: ""
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
