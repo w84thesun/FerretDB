@@ -76,8 +76,6 @@ jobs:
 
       - name: Setup Go
         uses: FerretDB/github-actions/setup-go@main
-        with:
-          cache-key: test
 
       - name: Install Task
         run: go generate -x
