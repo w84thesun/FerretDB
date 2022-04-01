@@ -38,7 +38,7 @@ tasks:
 
   env-up-detach:
     cmds:
-      - docker-compose up --always-recreate-deps --force-recreate --remove-orphans --renew-anon-volumes --detach --platform=linux
+      - docker-compose up --always-recreate-deps --force-recreate --remove-orphans --renew-anon-volumes --detach
 
   env-up:
     desc: 'Start development environment'
