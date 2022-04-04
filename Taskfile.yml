@@ -42,7 +42,7 @@ tasks:
 
   env-up-detach-windows:
     cmds:
-      - docker-compose up -f docker-compose.yml -f docker-compose.windows.yml --always-recreate-deps --force-recreate --remove-orphans --renew-anon-volumes --detach
+      - docker-compose -f docker-compose.yml -f docker-compose.windows.yml up --always-recreate-deps --force-recreate --remove-orphans --renew-anon-volumes --detach
 
   env-up:
     desc: 'Start development environment'
