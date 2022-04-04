@@ -73,7 +73,7 @@ jobs:
       GOMODCACHE: ""
     steps:
       - name: Setup WSL2
-        run: wsl --install -d Ubuntu
+        run: wsl --install -d Ubuntu-20.04
 
       - name: List version
         run: wsl --list --all
