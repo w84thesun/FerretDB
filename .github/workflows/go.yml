@@ -73,7 +73,7 @@ jobs:
       GOMODCACHE: ""
     steps:
       - name: Setup WSL2
-        run: wsl --install Ubuntu
+        run: wsl --install -d Ubuntu
 
       - name: Checkout code
         uses: actions/checkout@v3
