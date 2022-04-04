@@ -87,7 +87,7 @@ jobs:
         working-directory: tools
 
       - name: Start environment
-        run: bin/task env-up-detach
+        run: bin/task env-up-detach-windows
 
       - name: Run init
         run: bin/task init
