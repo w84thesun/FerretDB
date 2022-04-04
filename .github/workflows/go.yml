@@ -76,7 +76,7 @@ jobs:
         run: wsl --install -d Ubuntu
 
       - name: Upgrade distro version
-        run: wsl --set-version Ubuntu 2
+        run: wsl --set-version Ubuntu-20.04 2
 
       - name: Checkout code
         uses: actions/checkout@v3
