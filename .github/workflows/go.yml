@@ -73,7 +73,7 @@ jobs:
       GOMODCACHE: ""
     steps:
       - name: Setup WSL2
-        run: wsl --set-default-version 2
+        run: wsl --list --all
 
       - name: Checkout code
         uses: actions/checkout@v3
