@@ -75,6 +75,9 @@ jobs:
       - name: Setup WSL2
         run: wsl --install -d Ubuntu
 
+      - name: List version
+        run: wsl --list --all
+
       - name: Upgrade distro version
         run: wsl --set-version Ubuntu-20.04 2
 
