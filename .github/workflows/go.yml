@@ -73,7 +73,9 @@ jobs:
       GOMODCACHE: ""
     steps:
       - name: Setup WSL2
-        run: wsl --list --all
+        run: wsl --install Ubuntu
+        with:
+          cache-key: distro
 
       - name: Checkout code
         uses: actions/checkout@v3
