@@ -72,6 +72,9 @@ jobs:
       GOCACHE: ""
       GOMODCACHE: ""
     steps:
+      - name: Setup WSL2
+        run: wsl --set-default-version 2
+
       - name: Checkout code
         uses: actions/checkout@v3
         with:
@@ -87,7 +90,7 @@ jobs:
         working-directory: tools
 
       - name: Start environment
-        run: bin/task env-up-detach-windows
+        run: bin/task env-up-detach
 
       - name: Run init
         run: bin/task init
