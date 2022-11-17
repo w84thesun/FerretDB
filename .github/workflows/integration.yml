@@ -69,6 +69,7 @@ jobs:
 
       - name: Run ${{ matrix.task }} tests
         run: bin/task test-integration-${{ matrix.task }}
+        if: github.ref_name != "main" && ${{ matrix.only }} != "cockroach"
 
       # The token is not required but should make uploads more stable.
       # See https://github.com/codecov/codecov-action/issues/837.
